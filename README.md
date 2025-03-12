@@ -23,13 +23,13 @@ https://www.youtube.com/watch?v=XpBGwZNyUh0&ab_channel=VictorGordan
 <br/>
 .<br/>
 └── Project Solution Directory/<br/>
-    ├── [ProjectName].sln<br/>
-    ├── [ProjectName].vcxproj<br/>
-    ├── [ProjectName].vcxproj.filters<br/>
-    ├── [ProjectName].vcxproj.user<br/>
-    └── Libraries/<br/>
-        ├── lib<br/>
-        └── include<br/>
+&nbsp&nbsp&nbsp&nbsp├── [ProjectName].sln<br/>
+&nbsp&nbsp&nbsp&nbsp├── [ProjectName].vcxproj<br/>
+&nbsp&nbsp&nbsp&nbsp├── [ProjectName].vcxproj.filters<br/>
+&nbsp&nbsp&nbsp&nbsp├── [ProjectName].vcxproj.user<br/>
+&nbsp&nbsp&nbsp&nbsp└── Libraries/<br/>
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp├── lib<br/>
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp└── include<br/>
 <br/>
 9. Extract glfw-3.3.2 from the glfw-3.3.2.zip
 10. Open cmake and set the build directory to glfw-3.3.2/build (create the folder) and the source directory to glfw-3.3.2
