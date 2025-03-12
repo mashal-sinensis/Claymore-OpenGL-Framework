@@ -20,17 +20,17 @@ https://www.youtube.com/watch?v=XpBGwZNyUh0&ab_channel=VictorGordan
     f. Click glad.zip to download it
 6. Open Visual Studio and Select Empty Project for C++ and select "Place solution and project in the same directory"
 7. Create folders in the project solution directory to make your project directory look like this:
-
-.
-└── Project Solution Directory/
-    ├── [ProjectName].sln
-    ├── [ProjectName].vcxproj
-    ├── [ProjectName].vcxproj.filters
-    ├── [ProjectName].vcxproj.user
-    └── Libraries/
-        ├── lib
-        └── include
-   
+<br/>
+.<br/>
+└── Project Solution Directory/<br/>
+    ├── [ProjectName].sln<br/>
+    ├── [ProjectName].vcxproj<br/>
+    ├── [ProjectName].vcxproj.filters<br/>
+    ├── [ProjectName].vcxproj.user<br/>
+    └── Libraries/<br/>
+        ├── lib<br/>
+        └── include<br/>
+<br/>
 9. Extract glfw-3.3.2 from the glfw-3.3.2.zip
 10. Open cmake and set the build directory to glfw-3.3.2/build (create the folder) and the source directory to glfw-3.3.2
 11. Click on Configure (ensure that the correct Visual Studio generator is selected, use default native compilers) and click Finish
