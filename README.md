@@ -74,7 +74,7 @@ Create the following folder structure within your project directory:
 21. Download `stb_image.h` from [github.com/nothings/stb](https://github.com/nothings/stb):
     - Create the folder `ProjectSolutionDirectory/Libraries/include/stb`
     - Place `stb_image.h` into this folder.
-    - If using additional `.cpp` files from the repo, right-click them in Visual Studio and select **Compile**.
+    - Upon cloning `stb.cpp` from the repo, right-click it in Visual Studio and select **Compile**.
 
 ### Finalizing the Project
 
