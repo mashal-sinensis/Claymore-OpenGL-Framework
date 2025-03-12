@@ -1,10 +1,11 @@
 ## Developer Installation
 
-You may follow the OpenGL Setup steps from: https://www.youtube.com/watch?v=XpBGwZNyUh0&ab_channel=VictorGordan
+# You may follow the OpenGL Setup steps from: 
+https://www.youtube.com/watch?v=XpBGwZNyUh0&ab_channel=VictorGordan
 
-**or**
+# **OR**
 
-You can follow these project-specific written steps (based on the tutorial above):
+# You can follow these project-specific written steps (based on the tutorial above):
 
 1. (Optional) Update Graphics Card Drivers
 2. Download Visual Studio Community IDE
