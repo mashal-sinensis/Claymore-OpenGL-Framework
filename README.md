@@ -78,7 +78,7 @@ Create the following folder structure within your project directory:
 
 ### Finalizing the Project
 
-22. Clone the github project files `main.cpp`, `Texture.h`, etc. into the project directory and drag the `.cpp` and `.h` files into Visual Studio.
+22. Clone the github project files `main.cpp`, `Texture.h`, etc. into the project directory and drag the `.cpp` and `.h` files into Visual Studio. (Drag `.png` files into the `Resource Files`/`Textures` folder, and `.vert`/`.frag` files into `Resource Files`/`Shaders` folder in Visual Studio)
 23. Build and run the project to ensure the setup is successful.
 
 ---
