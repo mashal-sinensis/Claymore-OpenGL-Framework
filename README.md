@@ -1,55 +1,87 @@
+# Project Setup Guide
+
 ## Developer Installation
 
-# You may follow the OpenGL Setup steps from: 
-https://www.youtube.com/watch?v=XpBGwZNyUh0&ab_channel=VictorGordan
+You can follow either of the two options below to set up your OpenGL development environment:
 
-# **OR**
+### Option 1: Follow the Video Tutorial
+- [Victor Gordan's OpenGL Setup Tutorial](https://www.youtube.com/watch?v=XpBGwZNyUh0&ab_channel=VictorGordan)
 
-# You can follow these project-specific written steps (based on the tutorial above):
+### Option 2: Follow the Written Steps Below (Based on the Tutorial)
 
-1. (Optional) Update Graphics Card Drivers
-2. Download Visual Studio Community IDE
-3. Download Windows x64 Installer for cmake (cmake.org/download)
-4. Download the Source Package for GLFW (glfw.org/download.html)
-5. Go to glad.dav1d.de:
-    a. Select gl Version 3.3
-    b. Ensure that Language is set to C/C++
-    c. Specification is set to OpenGL
-    d. Profile is set to Core
-    e. Ignore everything else and press "Generate"
-    f. Click glad.zip to download it
-6. Open Visual Studio and Select Empty Project for C++ and select "Place solution and project in the same directory"
-7. Create folders in the project solution directory to make your project directory look like this:
-<br/>
-.<br/>
-└── Project Solution Directory/<br/>
-&nbsp&nbsp&nbsp&nbsp├── [ProjectName].sln<br/>
-&nbsp&nbsp&nbsp&nbsp├── [ProjectName].vcxproj<br/>
-&nbsp&nbsp&nbsp&nbsp├── [ProjectName].vcxproj.filters<br/>
-&nbsp&nbsp&nbsp&nbsp├── [ProjectName].vcxproj.user<br/>
-&nbsp&nbsp&nbsp&nbsp└── Libraries/<br/>
-&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp├── lib<br/>
-&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp└── include<br/>
-<br/>
-9. Extract glfw-3.3.2 from the glfw-3.3.2.zip
-10. Open cmake and set the build directory to glfw-3.3.2/build (create the folder) and the source directory to glfw-3.3.2
-11. Click on Configure (ensure that the correct Visual Studio generator is selected, use default native compilers) and click Finish
-12. Some checkboxes appear, ensure that the following checkboxes are set to true: GLFW_BUILD_DOCS, GLFW_BUILD_EXAMPLES, GLFW_BUILD_TESTS, GLFW_INSTALL, USE_MSVC_RUNTIME_LIBRARY_DLL (and the rest are set to false)
-13. Click Generate and exit Cmake once its done.
-14. Open the generated build folder (glfw-3.3.2/build), open GLFW.sln in VS, then build the solution. Exit VS when it's done.
-15. Open the debug folder (glfw-3.3.2/build/src/Debug) and copy the glfw3.lib file into the project lib folder (ProjectSolutionDirectory/Libraries/lib)
-16. Open the include folder (glfw-3.3.2/include) and copy the GLFW folder into the project include folder (ProjectSolutionDirectory/Libraries/include)
-17. Open glad.zip, open glad.zip/include and extract glad and KHR into the project include folder (ProjectSolutionDirectory/Libraries/include)
-18. Open glad.zip/src and extract the glad.c file into your project directory (ProjectSolutionDirectory/)
-19. Now, you can open the project solution ([ProjectName].sln) to configure it:
-    a. Ensure that you have x64 selected, click the Project button at the very top (next to Git and Build), select All Platforms
-    b. Go to VC++ Directories, open Include Directories and add the project include folder (ProjectSolutionDirectory/Libraries/include)
-    c. Do the same for the Library Directories, add the project lib folder (ProjectSolutionDirectory/Libraries/lib)
-    d. Open Linker/Input and open Additional Dependencies, write "glfw3.lib" and "opengl32.lib" in separate lines.
-20. Next, drag the glad.c file from your project directory into the solution source files (so VC can detect it)
-21. For textures to work, you need to download stb_image.h from github.com/nothings/stb:
-    a. Create a folder in the project solution directory (ProjectSolutionDirectory/Libraries/include/stb)
-    b. Download stb_image.h into the folder (github.com/nothings/stb)
-    c. In the next step, once you have cloned the github project files, right click the stb.cpp file and click "Compile", and you're done.
-23. Lastly, you can clone the github project files into the project directory and similarly drag the .cpp and .h files into the VS project
-24. Now, you should be able to run and build the project
+### Prerequisites
+1. **(Optional)** Update your graphics card drivers.
+2. Download and install **[Visual Studio Community](https://visualstudio.microsoft.com/)**.
+3. Download the **Windows x64 Installer** for CMake from [cmake.org](https://cmake.org/download/).
+4. Download the **Source Package** for GLFW from [glfw.org](https://www.glfw.org/download.html).
+5. Go to [glad.dav1d.de](https://glad.dav1d.de) and configure the following:
+    - **API**: OpenGL
+    - **Version**: 3.3
+    - **Profile**: Core
+    - **Language**: C/C++
+    - Click **Generate** and download the `glad.zip` file.
+
+### Project Directory Structure
+Create the following folder structure within your project directory:
+
+```
+.
+└── ProjectSolutionDirectory/
+    ├── [ProjectName].sln
+    ├── [ProjectName].vcxproj
+    ├── [ProjectName].vcxproj.filters
+    ├── [ProjectName].vcxproj.user
+    └── Libraries/
+        ├── lib/
+        └── include/
+```
+
+### Installation Steps
+
+9. Extract `glfw-3.3.2` from the downloaded ZIP.
+10. Open CMake and set:
+    - **Source Directory**: `glfw-3.3.2`
+    - **Build Directory**: `glfw-3.3.2/build` (create this folder if it doesn't exist)
+11. Click **Configure** (ensure the correct Visual Studio generator is selected) and then click **Finish**.
+12. In the CMake options, enable the following checkboxes:
+    - `GLFW_BUILD_DOCS`
+    - `GLFW_BUILD_EXAMPLES`
+    - `GLFW_BUILD_TESTS`
+    - `GLFW_INSTALL`
+    - `USE_MSVC_RUNTIME_LIBRARY_DLL`
+    - Ensure all other options are set to false.
+13. Click **Generate** and exit CMake once the process is complete.
+14. Open the generated `GLFW.sln` in Visual Studio, build the solution, and then close Visual Studio.
+15. Copy the generated `glfw3.lib` file from `glfw-3.3.2/build/src/Debug` to `ProjectSolutionDirectory/Libraries/lib`.
+16. Copy the `GLFW` folder from `glfw-3.3.2/include` to `ProjectSolutionDirectory/Libraries/include`.
+17. Extract the `glad` and `KHR` folders from `glad.zip/include` into `ProjectSolutionDirectory/Libraries/include`.
+18. Extract the `glad.c` file from `glad.zip/src` into `ProjectSolutionDirectory/`.
+
+### Visual Studio Project Configuration
+
+19. Open `[ProjectName].sln` and configure as follows:
+    - **Platform**: Ensure `x64` is selected.
+    - Go to **Project > Properties > VC++ Directories**:
+        - **Include Directories**: Add `ProjectSolutionDirectory/Libraries/include`
+        - **Library Directories**: Add `ProjectSolutionDirectory/Libraries/lib`
+    - Go to **Linker > Input > Additional Dependencies** and add:
+        - `glfw3.lib`
+        - `opengl32.lib`
+20. Drag `glad.c` into the **Source Files** filter in Visual Studio.
+
+### Setting Up Textures with stb_image
+
+21. Download `stb_image.h` from [github.com/nothings/stb](https://github.com/nothings/stb):
+    - Create the folder `ProjectSolutionDirectory/Libraries/include/stb`
+    - Place `stb_image.h` into this folder.
+    - If using additional `.cpp` files from the repo, right-click them in Visual Studio and select **Compile**.
+
+### Finalizing the Project
+
+22. Clone your project source files into the project directory and drag the `.cpp` and `.h` files into Visual Studio.
+23. Build and run the project to ensure the setup is successful.
+
+---
+
+You're now ready to develop using OpenGL in Visual Studio! 🎉
+
