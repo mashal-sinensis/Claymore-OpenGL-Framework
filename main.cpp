@@ -156,7 +156,7 @@ public:
 			// Apply world position (translation)
 			vertices[i].position.x = rotatedX + origin.x + position.x;
 			vertices[i].position.y = rotatedY + origin.y + position.y;
-			vertices[i].position.z = 0.0f; // 2D framework, so Z stays at 0.0f
+			vertices[i].position.z = 0.0f; // Only supporting 2D for now, so Z stays at 0.0f
 		}
 		updateBuffers();
 	}
@@ -247,7 +247,7 @@ public:
 			// Apply world position (translation)
 			vertices[i].position.x = rotatedX + origin.x + position.x;
 			vertices[i].position.y = rotatedY + origin.y + position.y;
-			vertices[i].position.z = 0.0f; // 2D framework, so Z stays at 0.0f
+			vertices[i].position.z = 0.0f; // Only supporting 2D for now, so Z stays at 0.0f
 		}
 
 		updateBuffers();
@@ -357,7 +357,7 @@ int main() {
 	glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 3);
 	glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE);
 
-    GLFWwindow* window = glfwCreateWindow(800, 800, "OpenGL 2D Framework", NULL, NULL);
+    GLFWwindow* window = glfwCreateWindow(800, 800, "Claymore 2D Framework", NULL, NULL);
     if (!window) {
         glfwTerminate();
         return -1;
