@@ -83,5 +83,4 @@ Create the following folder structure within your project directory:
 
 ---
 
-You're now ready to develop using OpenGL in Visual Studio! 🎉
-
+You're now ready to develop using Claymore-OpenGL-Framework in Visual Studio!
